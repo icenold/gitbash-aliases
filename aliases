@@ -1,0 +1,2 @@
+alias pkill='taskkill -f -pid';
+alias portusage='netstat -a -b -o | grep -i';
