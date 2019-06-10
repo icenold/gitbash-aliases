@@ -1,3 +1,0 @@
-alias pkill='taskkill -f -pid';
-alias portusage='netstat -a -b -o | grep -i';
-alias gitprettylog='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"'
