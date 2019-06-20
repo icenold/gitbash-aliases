@@ -8,7 +8,12 @@ alias endserve='git pull && powershell ./start_server.ps1';
 alias gitprettylog='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"';
 alias icelog="git log --all --graph --pretty=format:' %C(auto)%h %C(Blue)(%aN)%C(auto)%d %n %C(auto)%s%C(Green)(%ar) %n'";
 icediff(){
-  git difftool --dir-diff --no-prompt $1~1 $1;
+  if [ "$1" == "" ]
+  then
+    git difftool --dir-diff --no-prompt;
+  else
+    git difftool --dir-diff --no-prompt $1~1 $1;
+  fi
 };
 alias clear='printf "\033c"';
 
