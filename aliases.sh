@@ -6,8 +6,7 @@ alias gull='git pull';
 alias gp='git pull';
 alias endserve='git pull && powershell ./start_server.ps1';
 alias gitprettylog='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"';
-alias gitgraph="git log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(Blue)(%aN, %ar)'";
-alias icegraph="git log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(Blue)(%aN, %ar)'";
+alias icelog="git log --all --graph --pretty=format:' %C(auto)%h %C(Blue)(%aN)%C(auto)%d %n %C(auto)%s%C(Green)(%ar) %n'";
 icediff(){
   git difftool --dir-diff --no-prompt $1~1 $1;
 };
@@ -17,3 +16,5 @@ bind TAB:menu-complete;
 
 
 export PATH=$PATH:"/C/Program Files (x86)/Meld/lib";
+
+#gitgraph is aliased to `git log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(Blue)(%aN, %ar)''
